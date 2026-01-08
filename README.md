@@ -1,133 +1,168 @@
 <!-- markdownlint-disable MD041 -->
 <div align="center">
-  <a href="https://coder.com#gh-light-mode-only">
-    <img src="./docs/images/logo-black.png" alt="Coder Logo Light" style="width: 128px">
-  </a>
-  <a href="https://coder.com#gh-dark-mode-only">
-    <img src="./docs/images/logo-white.png" alt="Coder Logo Dark" style="width: 128px">
-  </a>
 
-  <h1>
-  Self-Hosted Cloud Development Environments
-  </h1>
+  <!-- Replace with Antara logo when ready -->
+  <img src="./docs/images/antara-logo-light.png" alt="Antara Logo" width="120"/>
 
-  <a href="https://coder.com#gh-light-mode-only">
-    <img src="./docs/images/banner-black.png" alt="Coder Banner Light" style="width: 650px">
-  </a>
-  <a href="https://coder.com#gh-dark-mode-only">
-    <img src="./docs/images/banner-white.png" alt="Coder Banner Dark" style="width: 650px">
-  </a>
+  <h1>Antara</h1>
+  <h3>Open Developer Infrastructure Platform</h3>
 
-  <br>
-  <br>
+  <p>
+    Antara is an open, self-hosted platform for building and operating cloud-based development environments.
+    It gives teams, institutions, and builders full control over developer infrastructure — from local labs
+    to private clouds and hybrid systems.
+  </p>
 
-[Quickstart](#quickstart) | [Docs](https://coder.com/docs) | [Why Coder](https://coder.com/why) | [Premium](https://coder.com/pricing#compare-plans)
+  <br/>
 
-[![discord](https://img.shields.io/discord/747933592273027093?label=discord)](https://discord.gg/coder)
-[![release](https://img.shields.io/github/v/release/coder/coder)](https://github.com/coder/coder/releases/latest)
-[![godoc](https://pkg.go.dev/badge/github.com/coder/coder.svg)](https://pkg.go.dev/github.com/coder/coder)
-[![Go Report Card](https://goreportcard.com/badge/github.com/coder/coder/v2)](https://goreportcard.com/report/github.com/coder/coder/v2)
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9511/badge)](https://www.bestpractices.dev/projects/9511)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/coder/coder/badge)](https://scorecard.dev/viewer/?uri=github.com%2Fcoder%2Fcoder)
-[![license](https://img.shields.io/github/license/coder/coder)](./LICENSE)
+  <p>
+    <strong>Build once. Develop anywhere. Control everything.</strong>
+  </p>
+
+  <br/>
+
+  <a href="#getting-started">Getting Started</a> ·
+  <a href="#why-antara">Why Antara</a> ·
+  <a href="#capabilities">Capabilities</a> ·
+  <a href="#vision">Vision</a> ·
+  <a href="#contributing">Contributing</a> ·
+  <a href="./LICENSE">License</a>
 
 </div>
 
-[Coder](https://coder.com) enables organizations to set up development environments in their public or private cloud infrastructure. Cloud development environments are defined with Terraform, connected through a secure high-speed Wireguard® tunnel, and automatically shut down when not used to save on costs. Coder gives engineering teams the flexibility to use the cloud for workloads most beneficial to them.
+---
 
-- Define cloud development environments in Terraform
-  - EC2 VMs, Kubernetes Pods, Docker Containers, etc.
-- Automatically shutdown idle resources to save on costs
-- Onboard developers in seconds instead of days
+## 🚀 What is Antara?
 
-<p align="center">
-  <img src="./docs/images/hero-image.png" alt="Coder Hero Image">
-</p>
+Antara is a platform for creating **consistent, secure, and scalable development environments** on infrastructure you control.
 
-## Quickstart
+Instead of every developer manually setting up machines, tools, and dependencies, Antara allows organizations and communities to define development environments once and deliver them instantly — locally, on servers, or in the cloud.
 
-The most convenient way to try Coder is to install it on your local machine and experiment with provisioning cloud development environments using Docker (works on Linux, macOS, and Windows).
+Antara is designed to function as a **foundation layer** for:
 
-```shell
-# First, install Coder
-curl -L https://coder.com/install.sh | sh
+• engineering teams  
+• academic institutions  
+• startup platforms  
+• research labs  
+• internal developer tools  
+• cloud-native products  
 
-# Start the Coder server (caches data in ~/.cache/coder)
-coder server
+It is not a single-purpose tool.  
+It is **developer infrastructure.**
 
-# Navigate to http://localhost:3000 to create your initial user,
-# create a Docker template and provision a workspace
-```
+---
 
-## Install
+## 🧠 Why Antara?
 
-The easiest way to install Coder is to use our
-[install script](https://github.com/coder/coder/blob/main/install.sh) for Linux
-and macOS. For Windows, use the latest `..._installer.exe` file from GitHub
-Releases.
+Modern development depends on complex stacks: compilers, runtimes, GPUs, containers, services, credentials, and networked systems.
 
-```shell
-curl -L https://coder.com/install.sh | sh
-```
+Antara exists to solve three structural problems:
 
-You can run the install script with `--dry-run` to see the commands that will be used to install without executing them. Run the install script with `--help` for additional flags.
+• environment inconsistency  
+• onboarding friction  
+• infrastructure sprawl  
 
-> See [install](https://coder.com/docs/install) for additional methods.
+By centralizing development environments into a controlled platform, Antara enables:
 
-Once installed, you can start a production deployment with a single command:
+• instant onboarding  
+• reproducible builds  
+• secure remote access  
+• scalable compute usage  
+• long-term maintainability  
 
-```shell
-# Automatically sets up an external access URL on *.try.coder.app
-coder server
+Antara moves development environments from “individual machines” into **engineered systems.**
 
-# Requires a PostgreSQL instance (version 13 or higher) and external access URL
-coder server --postgres-url <url> --access-url <url>
-```
+---
 
-Use `coder --help` to get a list of flags and environment variables. Use our [install guides](https://coder.com/docs/install) for a complete walkthrough.
+## ⚙️ Capabilities
 
-## Documentation
+Antara provides the foundation to:
 
-Browse our docs [here](https://coder.com/docs) or visit a specific section below:
+• provision development environments on demand  
+• operate self-hosted developer workspaces  
+• standardize tools and dependencies  
+• control access, networking, and lifecycle  
+• integrate with private infrastructure  
+• build custom developer platforms on top  
 
-- [**Templates**](https://coder.com/docs/templates): Templates are written in Terraform and describe the infrastructure for workspaces
-- [**Workspaces**](https://coder.com/docs/workspaces): Workspaces contain the IDEs, dependencies, and configuration information needed for software development
-- [**IDEs**](https://coder.com/docs/ides): Connect your existing editor to a workspace
-- [**Administration**](https://coder.com/docs/admin): Learn how to operate Coder
-- [**Premium**](https://coder.com/pricing#compare-plans): Learn about our paid features built for large teams
+The platform is designed to support:
 
-## Support
+• local clusters  
+• private cloud  
+• hybrid deployments  
+• research workloads  
+• enterprise systems  
+• educational environments  
 
-Feel free to [open an issue](https://github.com/coder/coder/issues/new) if you have questions, run into bugs, or have a feature request.
+Antara is intentionally extensible.  
+It is built to become what its users need.
 
-[Join our Discord](https://discord.gg/coder) to provide feedback on in-progress features and chat with the community using Coder!
+---
 
-## Integrations
+## 🧭 Getting Started
 
-We are always working on new integrations. Please feel free to open an issue and ask for an integration. Contributions are welcome in any official or community repositories.
+Antara is in active foundation development.
 
-### Official
+Current focus:
 
-- [**VS Code Extension**](https://marketplace.visualstudio.com/items?itemName=coder.coder-remote): Open any Coder workspace in VS Code with a single click
-- [**JetBrains Toolbox Plugin**](https://plugins.jetbrains.com/plugin/26968-coder): Open any Coder workspace from JetBrains Toolbox with a single click
-- [**JetBrains Gateway Plugin**](https://plugins.jetbrains.com/plugin/19620-coder): Open any Coder workspace in JetBrains Gateway with a single click
-- [**Dev Container Builder**](https://github.com/coder/envbuilder): Build development environments using `devcontainer.json` on Docker, Kubernetes, and OpenShift
-- [**Coder Registry**](https://registry.coder.com): Build and extend development environments with common use-cases
-- [**Kubernetes Log Stream**](https://github.com/coder/coder-logstream-kube): Stream Kubernetes Pod events to the Coder startup logs
-- [**Self-Hosted VS Code Extension Marketplace**](https://github.com/coder/code-marketplace): A private extension marketplace that works in restricted or airgapped networks integrating with [code-server](https://github.com/coder/code-server).
-- [**Setup Coder**](https://github.com/marketplace/actions/setup-coder): An action to setup coder CLI in GitHub workflows.
+• stabilizing the platform core  
+• formalizing deployment workflows  
+• defining architectural boundaries  
+• documenting extensibility paths  
 
-### Community
+Documentation and setup guides are being developed under `/docs`.
 
-- [**Provision Coder with Terraform**](https://github.com/ElliotG/coder-oss-tf): Provision Coder on Google GKE, Azure AKS, AWS EKS, DigitalOcean DOKS, IBMCloud K8s, OVHCloud K8s, and Scaleway K8s Kapsule with Terraform
-- [**Coder Template GitHub Action**](https://github.com/marketplace/actions/update-coder-template): A GitHub Action that updates Coder templates
+For now, Antara can be built and explored directly from source.
 
-## Contributing
+---
 
-We are always happy to see new contributors to Coder. If you are new to the Coder codebase, we have
-[a guide on how to get started](https://coder.com/docs/CONTRIBUTING). We'd love to see your
-contributions!
+## 🏗 Vision
 
-## Hiring
+Antara is being developed as a **long-term open infrastructure project.**
 
-Apply [here](https://jobs.ashbyhq.com/coder?utm_source=github&utm_medium=readme&utm_campaign=unknown) if you're interested in joining our team.
+The goal is to create a system that can evolve into:
+
+• a developer cloud backbone  
+• an academic computing platform  
+• a research and prototyping environment  
+• an internal engineering foundation  
+• a startup product core  
+
+Antara is not about replacing editors or tools.
+
+It is about **owning the environment layer.**
+
+---
+
+## 🤝 Contributing
+
+Antara is an open platform project.
+
+We welcome contributors interested in:
+
+• distributed systems  
+• developer tooling  
+• cloud infrastructure  
+• security and networking  
+• platform engineering  
+• documentation and education  
+
+Contribution guidelines will be published as the project stabilizes.
+
+Early contributors will help shape Antara’s architecture, standards, and long-term direction.
+
+---
+
+## 🛡 License
+
+This project is licensed under the terms described in the [LICENSE](./LICENSE) file.
+
+---
+
+## 🌱 Closing note
+
+Antara is at the beginning of its lifecycle.
+
+This is the stage where platforms are shaped, not just coded.
+
+If you care about how developers build, learn, and collaborate in the future, Antara is meant to be a place to contribute.
